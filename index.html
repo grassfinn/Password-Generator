@@ -9,23 +9,35 @@
   </head>
   <body>
     <header>
-      <h1>Generate a <span>random password</span></h1>
-      <p>Never Use an insecure password again.</p>
-      <input type="number" max="10"  placeholder="# of passwords?" id="number-of-pass">
-      <button>Generate Passwords</button>
+      <div class="container">
+        <section class="header">
+          <h1>
+            Generate a <br />
+            <span>random password</span>
+          </h1>
+          <p>Never Use an insecure password again.</p>
+          <form id="user-input">
+            <input
+              type="number"
+              max="10"
+              placeholder="# of passwords?"
+              class="input"
+              id="number-of-pass"
+            />
+            <button class="input" id="generate-password">Generate Passwords</button>
+          </form>
+        </section>
+      </div>
     </header>
     <main>
-        <article id="passwords">
-          <section class="random-password"></section>
-          <section class="random-password"></section>
-          <section class="random-password"></section>
-          <section class="random-password"></section>
-        </article>
+      <div class="container">
+        <article id="passwords"></article>
+      </div>
     </main>
 
-    <script src="./module/passwords.js" type="module"></script>
     <script src="./module/render.js" type="module"></script>
-    <!-- <script src="./module/app.js" type="module"></script> -->
+    <script src="./module/passwords.js" type="module"></script>
+    <script src="./module/app.js" type="module"></script>
     <!-- <script src="app.js"></script> -->
   </body>
 </html>

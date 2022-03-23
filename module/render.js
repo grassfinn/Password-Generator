@@ -39,29 +39,45 @@ button.addEventListener('click', () => {
     // create a div for the passwords
     let section = document.createElement('section');
     section.setAttribute('id', 'password-' + (index + 1));
+    section.classList.add('random-pass')
+    section.style.width ='223px'
+    section.style.height ='42px'
     passwordEl.append(section);
     section.textContent = pass;
 
-
-
-    let randomPasswordEl = document.getElementById('password-' + (index + 1))
+    let randomPasswordEl = document.getElementById('password-' + (index + 1));
 
     // randomPasswordEl.append(copyButton)
 
-    let copyButton = document.createElement('button')
-    copyButton.classList.add('copy-button')
-    copyButton.textContent = 'Press to Copy'
-    randomPasswordEl.append(copyButton)
+    // create the copy button
+    let copyButton = document.createElement('button');
+    // add class as 'copy-button'
+    copyButton.classList.add('copy-button');
+    // change text of button
+    copyButton.textContent = 'Press to Copy';
+    // copyButton.style.backgroundColor = '#10B981'
 
-    copyButton.addEventListener('click', () => {
+    // append button
+    randomPasswordEl.append(copyButton);
+
+    // loop through the buttons and copy the text when clipped
+
+    // 
+    let resetText = () => {
+      copyButton.textContent = 'Press to Copy'
+    }
+
+    let copyText = () => {
+      // https://www.w3schools.com/howto/howto_js_copy_clipboard.asp
+
       // research more about this
-       navigator.clipboard.writeText(pass)
-       copyButton.textContent = 'Password Copied!'
-    })
-    
+      navigator.clipboard.writeText(pass);
+      copyButton.textContent = 'Copied!';
+      setTimeout(resetText,2000)
+    }
+
+    copyButton.addEventListener('click', () => copyText() 
+    );
+
   });
 });
-
-//   copyText.select();
-
-
