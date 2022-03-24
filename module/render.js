@@ -11,7 +11,7 @@ let numberOfPassInput = document.querySelector('#number-of-pass');
 button.addEventListener('click', () => {
   // set password array to empty
   generatedPasswords = [];
-  let passwordEl = document.getElementById('passwords');
+  let passwordEl = document.getElementById('passwords-container');
   //   clear the passwords DOM content
   passwordEl.textContent = '';
 
@@ -40,10 +40,14 @@ button.addEventListener('click', () => {
     let section = document.createElement('section');
     section.setAttribute('id', 'password-' + (index + 1));
     section.classList.add('random-pass')
-    section.style.width ='223px'
-    section.style.height ='42px'
+    // section.style.width ='223px'
+    // section.style.height ='42px'
     passwordEl.append(section);
-    section.textContent = pass;
+
+    let span = document.createElement('span')
+    section.append(span)
+    span.classList.add('password')
+    span.textContent = pass 
 
     let randomPasswordEl = document.getElementById('password-' + (index + 1));
 
@@ -55,8 +59,6 @@ button.addEventListener('click', () => {
     copyButton.classList.add('copy-button');
     // change text of button
     copyButton.textContent = 'Press to Copy';
-    // copyButton.style.backgroundColor = '#10B981'
-
     // append button
     randomPasswordEl.append(copyButton);
 
