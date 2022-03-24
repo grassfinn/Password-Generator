@@ -22,7 +22,7 @@ button.addEventListener('click', () => {
   }
   // repeat random password as many times as you would like
   for (let times = 1; times <= numberOfPassInput.value; times++) {
-    if (numberOfPassInput.value > 10) {
+    if (numberOfPassInput.value > 9) {
       break;
     }
 
