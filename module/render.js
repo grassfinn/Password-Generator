@@ -23,11 +23,13 @@ button.addEventListener('click', () => {
   // repeat random password as many times as you would like
   for (let times = 1; times <= numberOfPassInput.value; times++) {
     if (numberOfPassInput.value > 9) {
+      alert('One does not need that many passwords!')
+      numberOfPassInput.value = ''
       break;
     }
-
     generatedPasswords.push(randomPassword());
   }
+  numberOfPassInput.value = ''
   console.log('Your passwords are:', generatedPasswords);
   // display the passwords in the dom
 

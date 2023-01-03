@@ -17,7 +17,7 @@
     }
 
     .header {
-
+        text-align: center;
         margin-bottom: 1em;
     }
 
@@ -48,6 +48,10 @@
         border-style: none;
         padding: 5px 50px;
         text-align: center;
+    }
+
+    .container{
+        margin: 0 auto;
     }
 /* *************************** */
 /* *****Phone Styles********** */
@@ -113,17 +117,15 @@
 
     #passwords-container {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: auto auto auto;
         align-items: center;
-        justify-content: space-between;
-        gap: 1.5em;
+        justify-content: center;
     }
 
     .random-pass {
         border-radius: 6px;
         background-color: #273549;
         color: #55F991;
-
         display: inline-block;
         padding: .5em ;
     }
