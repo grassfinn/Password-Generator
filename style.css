@@ -53,11 +53,13 @@
     .container{
         margin: 0 auto;
     }
+
+
 /* *************************** */
 /* *****Phone Styles********** */
 /* *************************** */
-/* checking for screen of 350 px */
-@media screen and (min-width: 350px) {
+@media screen and (max-width: 700px) {
+
 
     p {
         font-size: 2rem;
@@ -66,6 +68,7 @@
             background-color: #10B981;
             color: white;
             font-weight: bolder;
+            width: 100%;
         }
 
     #passwords-container {
@@ -83,7 +86,9 @@
     }
     .random-pass {
         font-size:  1.5rem;
-        width: 250px;
+        width: 100%;
+        align-self: center;
+        
     }
 
     /* use padding for buttons */
@@ -98,15 +103,12 @@
     
 }
 
-/* *************************** */
-/* *****Tablet Styles********** */
-/* *************************** */
-@media screen and (min-width: 700px) {}
 
-/* *************************** */
+
+    /* *************************** */
 /* ****Desktop Styles********** */
 /* *************************** */
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 700px) {
 
 
     #generate-password {
@@ -120,6 +122,7 @@
         grid-template-columns: auto auto auto;
         align-items: center;
         justify-content: center;
+        gap: 1.5em;
     }
 
     .random-pass {
@@ -127,7 +130,7 @@
         background-color: #273549;
         color: #55F991;
         display: inline-block;
-        padding: .5em ;
+        padding: 1em ;
     }
 
     .container {
@@ -145,10 +148,15 @@
     .input {
         border-radius: 6px;
         border-style: none;
-        width: 250px;
+        width: 300px;
+        padding: 1em;
     }
 
+    .password {
+        margin-right: .5em;
+    }
 
 }
+
 
 
